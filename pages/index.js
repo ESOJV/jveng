@@ -7,19 +7,7 @@ import Homeposts from '../components/Homeposts';
 import Pagetemplate from '../components/Pagetemplate';
 import Projectbars from '../components/Projectbars';
 
-
 export default function Home({posts}) {
-  
-/* 
-
-Heres What we need to do 
-1.) Learn how to make different calls for different parts (not just posts)
-2.) Learn how to make slugs appear 
-3.) css fixing for postsGrids, and for testblog
-4.)Global font
-
-*/
-
 
   return (
     <div className='selection:bg-yellow-400'>      
