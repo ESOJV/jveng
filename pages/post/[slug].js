@@ -2,6 +2,7 @@ import React from 'react'
 import Navbutton from '../../components/Navbutton'
 import Pagetemplate from '../../components/Pagetemplate'
 import moment from 'moment'
+import {getPosts, getPostDetails } from '../../Services'
 //fix the top bar so you can scroll 
 //make the button scroll all the way to the bottom
 
@@ -26,14 +27,14 @@ const PostText = ({markup}) => {
 )}
 
 
-const PostDetails = () => {
+const PostDetails = ({ post }) => {
   return (
      <div className='selection:bg-yellow-400 '>
         <Pagetemplate>
           <div className='ml-4 mt-4'>
           <Navbutton buttonText={'<- HOME'} />
           </div>
-          <PostHeader title = ''/>
+          <PostHeader title = {post.title} />
           <PostText/>
           <div className='absolute bottom-0 left-0 ml-10'>
           <Navbutton buttonText={'LAST POST'}/>
@@ -48,3 +49,21 @@ const PostDetails = () => {
 }
 
 export default PostDetails
+
+
+export async function getStaticProps({ params }) {
+  const data = await getPostDetails(params.slug);
+
+  return {
+    props: { post: data}
+  }
+}
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+
+  return {
+    paths: posts.map(({node: {slug}}) => ({ params: {slug}})),
+    fallback: false, 
+  }
+}

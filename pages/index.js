@@ -17,8 +17,6 @@ export default function Home({posts}) {
         <title> JV.ENG </title>
       
       </Head>
-    
-   
 
     <Pagetemplate>
       <Projectbars>
@@ -30,9 +28,6 @@ export default function Home({posts}) {
   
     </div>
 
-  
-
-    
   )
 }
 
