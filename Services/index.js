@@ -43,6 +43,8 @@ export const getPostDetails =  async (slug) => {
             sectionContent1
             sectionTitle1
             createdAt
+            sectionContent2
+            sectionTitle2
           }
         }
     `;
