@@ -48,14 +48,19 @@ const PostDetails = ({ post }) => {
            </>)
            })}
 
-           <div className=' pt-7 '></div>
-
-          {sectionTitles.map((e, index) => {return(
-          <div className=' pb-60'>
-          <Section sectionTitle={e} sectionContent = {sectionContents[index]}/>
-          </div>
-          )})}
           
+           <div className='flex flex-col'>
+          {sectionTitles.map((e, index) => {return(
+            
+            <div>
+          
+          <Section sectionTitle={e} sectionContent = {sectionContents[index]}/>
+
+          
+          </div>
+          
+          )})}
+          </div>
           
           <div className='absolute bottom-0 left-0 ml-10'>
           <Navbutton buttonText={'LAST POST'}/>

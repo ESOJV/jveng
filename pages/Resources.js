@@ -2,6 +2,9 @@ import React from 'react'
 import Pagetemplate from '../components/Pagetemplate'
 import Section from '../components/Section'
 import Link from 'next/link'
+import FileTable from '../components/FileTable'
+
+
 
 const  ResourcesHeader = () => {
   return(
