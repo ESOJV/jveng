@@ -62,13 +62,7 @@ const PostDetails = ({ post }) => {
           )})}
           </div>
           
-          <div className='absolute bottom-0 left-0 ml-10'>
-          <Navbutton buttonText={'LAST POST'}/>
-          </div>
-
-          <div className='absolute bottom-0 right-0 mr-10 '>
-          <Navbutton buttonText={'NEXT POST->'} />
-          </div>
+        
         </Pagetemplate>
     </div>
   )
