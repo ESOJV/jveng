@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-const Section = ({sectionTitle, sectionContent}) => {
+const Section = ({sectionTitle, sectionContent, children}) => {
   
   //The state for the accordion section
   const [isOpen, setIsOpen] = useState(true)
@@ -25,6 +25,7 @@ const Section = ({sectionTitle, sectionContent}) => {
       return( 
       <p className='border-l-2 border-t-0 border-r-2 border-b-2 border-dashed border-black mt-1 text-black py-2 px-4'>
          {sectionContent} 
+         {children}
       </p>)
     }
   

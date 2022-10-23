@@ -35,10 +35,11 @@ const Resources = () => {
           <NavHeader/>
 
         <div id='Hardware' className='mt-8'>
-          <Section 
-              sectionTitle = 'Hardware'
-              sectionContent = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'
-          />
+          <Section sectionTitle = 'Hardware'>
+
+          <FileTable/>
+
+            </Section>
         </div>
 
         </div>
