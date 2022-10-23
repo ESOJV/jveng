@@ -2,7 +2,6 @@ import React from 'react'
 
 
 const Postsgrid = ( {props} ) => {
-  //Lets maybe rething the readability of this 
   return (
     
     

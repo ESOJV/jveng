@@ -29,9 +29,10 @@ const  PostHeader = ({title, excerpt, postTime}) => {
 
 const PostDetails = ({ post }) => {
 
-  const sectionTitles = [post.sectionTitle1, post.sectionTitle2] 
+  let sectionTitles = [post.sectionTitle1, post.sectionTitle2] 
+  
 
-  const sectionContents = [post.sectionContent1, post.sectionContent2]
+  let sectionContents = [post.sectionContent1, post.sectionContent2]
    
   
   return (
@@ -42,24 +43,24 @@ const PostDetails = ({ post }) => {
           </div>
           <PostHeader title = {post.title} excerpt = {post.excerpt} postTime = {post.createdAt} />
           
-           {sectionTitles.map((title, index) => {return(
+           {sectionTitles.map((title, index) => {
+            if (title != 'null' && title != null) { 
+            return(
            <>
            <NavHeader text={title} num={index} />
-           </>)
+           </>)}
            })}
 
           
            <div className='flex flex-col'>
-          {sectionTitles.map((e, index) => {return(
-            
+          {sectionTitles.map((title, index) => {
+            if(title != 'null' && title != null){
+            return(
             <div>
-          
-          <Section sectionTitle={e} sectionContent = {sectionContents[index]}/>
-
-          
+          <Section sectionTitle={title} sectionContent = {sectionContents[index]}/>
           </div>
           
-          )})}
+          )}})}
           </div>
           
         
